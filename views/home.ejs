@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <!-- //or local.title -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+</head>
+
+<body>
+    <!-- <h1>Unagi! I know its running...in EJS file.</h1> -->
+    <h1 id="contact-head"><i class="fa-solid fa-address-book"></i>
+        My Contacts: </h1>
+
+    <div id="contact-listing">
+        <ul>
+            <% for (i of contact_list){%>
+
+                <li>
+                    <div id="list-box">
+                        <h3 id="contact-name">
+                            <i class="fa-solid fa-user"></i>
+                            <%= i.name %>
+                        </h3>
+                        <p id="contact-phone">
+                            <%= i.phone %>
+                        </p>
+                        <div class="delete-button">
+                            <a href="/delete-contact/?phone=<%= i.phone%>">
+                                <i class="fa-solid fa-trash"></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <%}%>
+        </ul>
+    </div>
+
+    <div id="form-div">
+        <form action="/create_contact" method="post">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="number" name="phone" placeholder="Phone" required>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="/js/home.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+body{
+    margin: 0px;
+    font-family:'Times New Roman', Times, serif;
+    /* text-align: center; */
+}
+
+#contact-head{
+    margin-top: 10px;
+    color: gray;
+    text-align: center;
+}
+
+#list-box{
+    height: auto;
+    width: 500px;
+    background-color: aqua;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border: 2px dashed magenta;
+    display: flex;
+    justify-content: space-between;
+    /* width: 90%; */
+
+}
+
+#list-box:hover{
+    transition-duration: 0.5s;
+    background-color: magenta;
+}
+
+#list-box .delete-button{
+    padding-top: 20px ;
+}
+
+#list-box .delete-button a{
+    color: red;
+    /* background-color: white */
+}
+
+ul{
+    padding: 0;
+}
+
+li{
+    list-style: none;
+    /* display: inline; */
+}
+
+#contact-phone{
+    text-align: right;
+    font-size: larger;
+}
+p{
+    font-size:large;
+}
+
+form{
+    /* display: flex; */
+    text-align: center;
+    align-items: inline-block;
+    height: 50px;
+    
+}
+
+button{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    background-color: gray;
+    border:10px solid gray;
+    width:100px;
+    border-radius: 10px;
+
+}
+
+input{
+    width: 200px;
+    border: 0px 0px 1px 0px solid gray;
+    height: 30px;
+    border-radius:10px ;
+}
+
+
+
+
+
